@@ -17,9 +17,6 @@ import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { AlertsPopupComponent } from './alerts-popup/alerts-popup.component';
 import { PaymentHelpPopupComponent } from './payment-help-popup/payment-help-popup.component';
-import { DashboardServiceService } from './dashboard-service.service';
-import { ReactiveFormsModule } from '@angular/forms';
-import { EppPopupComponent } from './epp/epp-popup/epp-popup.component';
 
 const dashboardRoute: Routes = [
   { path: '', component: DashboardComponent,
@@ -38,7 +35,6 @@ const dashboardRoute: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(dashboardRoute),
-    ReactiveFormsModule
   ],
   declarations: [
                   DashboardComponent, 
@@ -56,11 +52,7 @@ const dashboardRoute: Routes = [
                   FaqComponent,
                   ContactComponent,
                   AlertsPopupComponent,
-                  PaymentHelpPopupComponent,
-                  EppPopupComponent
-              ],
-  providers: [
-    DashboardServiceService
-  ]
+                  PaymentHelpPopupComponent
+              ]
 })
 export class DashboardModule { }

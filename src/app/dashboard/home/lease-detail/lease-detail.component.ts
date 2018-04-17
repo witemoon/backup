@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardServiceService } from '../../dashboard-service.service';
 
 @Component({
   selector: 'lease-detail',
@@ -8,14 +7,9 @@ import { DashboardServiceService } from '../../dashboard-service.service';
 })
 export class LeaseDetailComponent implements OnInit {
 
-  leaseData = {};
-
-  constructor(private dashboardService:DashboardServiceService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.dashboardService.leaseData.subscribe(data=>{
-      this.leaseData = data;
-    })
   }
 
 }
